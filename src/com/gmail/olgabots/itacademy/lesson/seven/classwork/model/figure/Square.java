@@ -1,4 +1,6 @@
-package com.gmail.olgabots.itacademy.lesson.seven.classwork;
+package com.gmail.olgabots.itacademy.lesson.seven.classwork.model.figure;
+
+import com.gmail.olgabots.itacademy.lesson.seven.classwork.model.figure.Figure;
 
 public class Square extends Figure {
     public static final int COUNT_OF_SITES = 4;

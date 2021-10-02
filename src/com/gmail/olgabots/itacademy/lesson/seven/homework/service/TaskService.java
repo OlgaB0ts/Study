@@ -1,4 +1,7 @@
 package com.gmail.olgabots.itacademy.lesson.seven.homework.service;
 
-public interface TaskThreeService {
+public interface TaskService {
+
+    void runTask();
+
 }

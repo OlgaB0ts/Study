@@ -1,4 +1,4 @@
-package com.gmail.olgabots.itacademy.lesson.seven.classwork;
+package com.gmail.olgabots.itacademy.lesson.seven.classwork.model.student;
 
 public class Man {
 

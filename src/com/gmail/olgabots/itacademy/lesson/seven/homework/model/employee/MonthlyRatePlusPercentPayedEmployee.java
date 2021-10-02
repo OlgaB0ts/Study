@@ -1,22 +1,37 @@
 package com.gmail.olgabots.itacademy.lesson.seven.homework.model.employee;
 
 public class MonthlyRatePlusPercentPayedEmployee extends Employee {
-    private double baseMonthlyRate;
-    private double salesAmountPerMonth;
-    private int salaryPercent;
+    private Double baseMonthlyRateValue;
+    private Double amountOfSalesPerMonth;
+    private Integer salaryPercent;
 
-    public MonthlyRatePlusPercentPayedEmployee(String firstName, String lastName, String post, String department, double baseMonthlyRate, int salaryPercent) {
-        super(firstName, lastName, post, department);
-        this.baseMonthlyRate = baseMonthlyRate;
+    @Override
+    public double getMonthSalary() {
+        return baseMonthlyRateValue + amountOfSalesPerMonth * salaryPercent / 100;
+    }
+
+    public void setBaseMonthlyRateValue(Double baseMonthlyRateValue) {
+        this.baseMonthlyRateValue = baseMonthlyRateValue;
+    }
+
+    public void setAmountOfSalesPerMonth(Double amountOfSalesPerMonth) {
+        this.amountOfSalesPerMonth = amountOfSalesPerMonth;
+    }
+
+    public void setSalaryPercent(Integer salaryPercent) {
         this.salaryPercent = salaryPercent;
     }
 
     @Override
-    public double getMonthSalary() {
-        return baseMonthlyRate + salesAmountPerMonth * (salaryPercent / 100);
-    }
-
-    public void setSalesAmountPerMonth(double salesAmountPerMonth) {
-        this.salesAmountPerMonth = salesAmountPerMonth;
+    public String toString() {
+        return "MonthlyRatePlusPercentPayedEmployee{" +
+                "firstName='" + getFirstName() + '\'' +
+                ", lastName='" + getLastName() + '\'' +
+                ", post='" + getPost() + '\'' +
+                ", department='" + getDepartment() + '\'' +
+                ", baseMonthlyRateValue=" + baseMonthlyRateValue +
+                ", amountOfSalesPerMonth=" + amountOfSalesPerMonth +
+                ", salaryPercent=" + salaryPercent +
+                '}';
     }
 }

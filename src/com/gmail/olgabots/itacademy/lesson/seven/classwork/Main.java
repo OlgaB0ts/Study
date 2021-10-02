@@ -1,25 +1,29 @@
 package com.gmail.olgabots.itacademy.lesson.seven.classwork;
 
+import com.gmail.olgabots.itacademy.lesson.seven.classwork.model.figure.Rectangle;
+import com.gmail.olgabots.itacademy.lesson.seven.classwork.model.figure.Square;
+import com.gmail.olgabots.itacademy.lesson.seven.classwork.model.student.Man;
+import com.gmail.olgabots.itacademy.lesson.seven.classwork.model.student.Student;
+import com.gmail.olgabots.itacademy.lesson.seven.classwork.service.TaskService;
+import com.gmail.olgabots.itacademy.lesson.seven.classwork.service.impl.TaskOneServiceImpl;
+import com.gmail.olgabots.itacademy.lesson.seven.classwork.service.impl.TaskThreeServiceImpl;
+import com.gmail.olgabots.itacademy.lesson.seven.classwork.service.impl.TaskTwoServiceImpl;
+import com.gmail.olgabots.itacademy.lesson.six.homework.string.TaskTwo;
+
 public class Main {
 
     public static void main(String[] args) {
-        Man manFirst = new Man();
-        manFirst.setAge(45);
-        manFirst.setName("Ivan");
 
-        Student studentFirst = new Student();
-        studentFirst.setYearOfStudy(7);
-        studentFirst.setAge(28);
-        studentFirst.setName("Polina");
 
-        System.out.println(studentFirst);
-        System.out.println(manFirst);
+        TaskService taskServiceOne = new TaskOneServiceImpl();
+        TaskService taskServiceTwo = new TaskTwoServiceImpl();
+        TaskService taskServiceThree = new TaskThreeServiceImpl();
 
-        Rectangle rectangle = new Rectangle(23, 2);
-        Square square = new Square(98);
+        TaskService[] taskServices = {taskServiceOne, taskServiceTwo, taskServiceThree};
 
-        System.out.println(rectangle.getPerimeter());
-        System.out.println(square.getPerimeter());
+        for (TaskService taskService : taskServices) {
+            taskService.runTask();
+        }
 
     }
 }

@@ -1,7 +1,5 @@
 package com.gmail.olgabots.itacademy.lesson.seven.homework.model.vehicle;
 
-import com.gmail.olgabots.itacademy.lesson.seven.homework.model.vehicle.Automobile;
-
 public class GermanyAutomobile extends Automobile {
     private static final String COUNTRY_NAME = "Germany";
 
@@ -12,6 +10,8 @@ public class GermanyAutomobile extends Automobile {
 
     @Override
     public String getDescription() {
-        return super.getDescription() + " My country - " + COUNTRY_NAME + ". Auto rate - " + getRate();
+        return super.getDescription()
+                + " My country - " + COUNTRY_NAME + "."
+                + " Auto rate - " + getRate();
     }
 }

@@ -1,6 +1,6 @@
-package com.gmail.olgabots.itacademy.lesson.seven.classwork.interfaces;
+package com.gmail.olgabots.itacademy.lesson.seven.classwork.model.bulb;
 
-public class XiaomiBulb  implements LightBulbControl{
+public class XiaomiBulb  implements OnOffControllable {
     @Override
     public void on() {
         System.out.println("Xiaomi on");

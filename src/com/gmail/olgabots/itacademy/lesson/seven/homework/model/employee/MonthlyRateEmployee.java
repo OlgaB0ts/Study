@@ -1,16 +1,26 @@
 package com.gmail.olgabots.itacademy.lesson.seven.homework.model.employee;
 
-public class MonthlyRateEmployee extends Employee{
+public class MonthlyRateEmployee extends Employee {
 
-    private double monthlyRate;
-
-    public MonthlyRateEmployee(String firstName, String lastName, String post, String department, double monthlyRate) {
-        super(firstName, lastName, post, department);
-        this.monthlyRate = monthlyRate;
-    }
+    private Double monthlyRateValue;
 
     @Override
     public double getMonthSalary() {
-        return monthlyRate;
+        return monthlyRateValue;
+    }
+
+    public void setMonthlyRateValue(Double monthlyRateValue) {
+        this.monthlyRateValue = monthlyRateValue;
+    }
+
+    @Override
+    public String toString() {
+        return "MonthlyRateEmployee{" +
+                "firstName='" + getFirstName() + '\'' +
+                ", lastName='" + getLastName() + '\'' +
+                ", post='" + getPost() + '\'' +
+                ", department='" + getDepartment() + '\'' +
+                ", monthlyRateValue=" + monthlyRateValue +
+                '}';
     }
 }

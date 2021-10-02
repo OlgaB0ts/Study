@@ -1,15 +1,8 @@
 package com.gmail.olgabots.itacademy.lesson.seven.homework.model.figure;
 
-import com.gmail.olgabots.itacademy.lesson.seven.homework.model.figure.Figure;
-
 public class Rectangle extends Figure {
-    private int weight;
-    private int height;
-
-    public Rectangle(int weight, int height) {
-        this.weight = weight;
-        this.height = height;
-    }
+    private Integer weight;
+    private Integer height;
 
     @Override
     public double getPerimeter() {
@@ -19,6 +12,14 @@ public class Rectangle extends Figure {
     @Override
     public double getArea() {
         return weight * height;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
     }
 
     @Override

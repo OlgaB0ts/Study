@@ -1,39 +1,45 @@
 package com.gmail.olgabots.itacademy.lesson.seven.homework.model.figure;
 
-import com.gmail.olgabots.itacademy.lesson.seven.homework.model.figure.Figure;
-
 public class Triangle extends Figure {
-    private int firstSide;
-    private int secondSide;
-    private int thirdSide;
-
-    public Triangle(int firstSide, int secondSide, int thirdSide) {
-        this.firstSide = firstSide;
-        this.secondSide = secondSide;
-        this.thirdSide = thirdSide;
-    }
+    private Integer firstSideLength;
+    private Integer secondSideLength;
+    private Integer thirdSideLength;
 
     @Override
     public double getPerimeter() {
-        return firstSide + secondSide + thirdSide;
+        return firstSideLength
+                + secondSideLength
+                + thirdSideLength;
     }
 
     @Override
     public double getArea() {
         double halfPerimeter = getPerimeter() / 2;
         double area = Math.sqrt(halfPerimeter
-                * (halfPerimeter - firstSide)
-                * (halfPerimeter - secondSide)
-                * (halfPerimeter - thirdSide));
+                * (halfPerimeter - firstSideLength)
+                * (halfPerimeter - secondSideLength)
+                * (halfPerimeter - thirdSideLength));
         return area;
+    }
+
+    public void setFirstSideLength(Integer firstSideLength) {
+        this.firstSideLength = firstSideLength;
+    }
+
+    public void setSecondSideLength(Integer secondSideLength) {
+        this.secondSideLength = secondSideLength;
+    }
+
+    public void setThirdSideLength(Integer thirdSideLength) {
+        this.thirdSideLength = thirdSideLength;
     }
 
     @Override
     public String toString() {
         return "Triangle{" +
-                "firstSide=" + firstSide +
-                ", secondSide=" + secondSide +
-                ", thirdSide=" + thirdSide +
+                "firstSide=" + firstSideLength +
+                ", secondSide=" + secondSideLength +
+                ", thirdSide=" + thirdSideLength +
                 '}';
     }
 }
